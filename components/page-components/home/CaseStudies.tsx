@@ -7,7 +7,9 @@ export default function CaseStudies() {
   return (
     <div>
       <div className="flex items-center gap-10 mb-20">
-        <h2 className="bg-[#B9FF66] font-bold p-2 text-2xl">Case Studies</h2>
+        <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
+          Case Studies
+        </h2>
         <p className="w-130">
           Explore Real-Life Examples of Our Proven Digital Marketing Success
           through Our Case Studies
