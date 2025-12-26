@@ -120,3 +120,34 @@
     @apply bg-background text-foreground font-sans;
   }
 }
+
+  /* Loop horizontal scroll animation */
+  @keyframes logo-scroll {
+    0% {
+      transform: translateX(10%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Animation utility class */
+  .animate-logo-scroll {
+    width: max-content;
+    animation: logo-scroll 40s linear infinite;
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .animate-logo-scroll {
+      animation-duration: 40s;
+    }
+  }
+
+  /* Large screens */
+  @media (min-width: 1024px) {
+    .animate-logo-scroll {
+      animation-duration: 20s;
+    }
+  }

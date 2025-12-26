@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Container from "@/components/layout/Container";
 import Footer from "@/components/layout/Footer";
+import MobileFooter from "@/components/layout/MobileFooter";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -31,8 +32,13 @@ export default function RootLayout({
         <Navbar />
         <Container>
           {children}
-          <Footer />
+          <div className="hidden lg:block">
+            <Footer />
+          </div>
         </Container>
+        <div className="lg:hidden">
+          <MobileFooter />
+        </div>
       </body>
     </html>
   );
