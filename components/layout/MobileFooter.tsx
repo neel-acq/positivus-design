@@ -28,7 +28,7 @@ export default function MobileFooter() {
                 <Link href="#" className="text-white underline">
                   About us
                 </Link>
-                <Link href="#" className="text-white underline">
+                <Link href="#Services" className="text-white underline">
                   Services
                 </Link>
                 <Link href="#" className="text-white underline">

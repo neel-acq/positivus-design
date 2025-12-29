@@ -25,7 +25,7 @@ export default function Navbar() {
             <Link href="#" className="text-black">
               About us
             </Link>
-            <Link href="#" className="text-black">
+            <Link href="#Services" className="text-black">
               Services
             </Link>
             <Link href="#" className="text-black">
@@ -53,7 +53,7 @@ export default function Navbar() {
               <Link href="#" className="text-black">
                 About us
               </Link>
-              <Link href="#" className="text-black">
+              <Link href="#Services" className="text-black">
                 Services
               </Link>
               <Link href="#" className="text-black">

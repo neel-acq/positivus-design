@@ -104,7 +104,7 @@ function AccordionItem({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between p-5 font-medium text-body hover:text-fg-brand hover:bg-brand-softer transition"
+        className="flex w-full items-center justify-between p-5 font-medium text-body hover:text-fg-brand hover:bg-brand-softer transition cursor-pointer"
       >
         <div className="flex items-center">
           <span className="mr-6 text-[30px]">0{index}</span>

@@ -20,7 +20,7 @@ export default function Home() {
       <div className="mt-17.5">
         <Proposal />
       </div>
-      <div className="mt-17.5">
+      <div className="mt-17.5" id="Services">
         <Services />
       </div>
       <div className="mt-35">
