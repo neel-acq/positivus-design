@@ -29,7 +29,7 @@ export default function Services() {
                   <p className="text-black ml-4">Learn more</p>
                 </div>
               </div>
-              <div className="text-center justify-center ">
+              <div className="text-center justify-center w-full">
                 <Image
                   src={
                     "/images/Services/tokyo-magnifier-web-search-with-elements 2.png"
@@ -46,7 +46,7 @@ export default function Services() {
           <div className="flex flex-col gap-6">
             <div className="flex gap-30">
               <div>
-                <h3 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl w-fit max-w-[210px]">
+                <h3 className="bg-[#F3F3F3] rounded-[7px] font-bold p-2 text-2xl w-fit max-w-[210px]">
                   Pay-per-click advertising
                 </h3>
                 <div className="flex text-center mt-23">
@@ -101,7 +101,7 @@ export default function Services() {
             <div className="flex gap-30">
               <div>
                 <h3 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl w-fit max-w-[210px]">
-                  Search engine optimization
+                  Email Marketing
                 </h3>
                 <div className="flex text-center mt-23">
                   <div className="bg-black rounded-full p-2 w-fit">
@@ -113,11 +113,11 @@ export default function Services() {
               <div className="text-center justify-center ">
                 <Image
                   src={
-                    "/images/Services/tokyo-magnifier-web-search-with-elements 2.png"
+                    "/images/Services/tokyo-sending-messages-from-one-place-to-another 1.png"
                   }
                   width={170}
                   height={210}
-                  alt="Search engine optimization"
+                  alt="Email Marketing"
                 />
               </div>
             </div>
@@ -127,8 +127,8 @@ export default function Services() {
           <div className="flex flex-col gap-6">
             <div className="flex gap-30">
               <div>
-                <h3 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl w-fit max-w-[210px]">
-                  Pay-per-click advertising
+                <h3 className="bg-[#F3F3F3] rounded-[7px] font-bold p-2 text-2xl w-fit max-w-[210px]">
+                  Content Creation
                 </h3>
                 <div className="flex text-center mt-23">
                   <div className="bg-black rounded-full p-2 w-fit">
@@ -140,11 +140,11 @@ export default function Services() {
               <div className="text-center justify-center ">
                 <Image
                   src={
-                    "/images/Services/tokyo-selecting-a-value-in-the-browser-window 1.png"
+                    "/images/Services/tokyo-many-browser-windows-with-different-information 1.png"
                   }
                   width={170}
                   height={210}
-                  alt="Pay-per-click advertising"
+                  alt="Content Creation"
                 />
               </div>
             </div>
@@ -155,7 +155,7 @@ export default function Services() {
             <div className="flex gap-30">
               <div>
                 <h3 className="bg-white text-black rounded-[7px] font-bold p-2 text-2xl w-fit max-w-[210px]">
-                  Social Media Marketing
+                  Analytics and Tracking
                 </h3>
                 <div className="flex text-center mt-23">
                   <div className="bg-white rounded-full p-2 w-fit">
@@ -167,11 +167,11 @@ export default function Services() {
               <div className="text-center justify-center ">
                 <Image
                   src={
-                    "/images/Services/tokyo-browser-window-with-emoticon-likes-and-stars-around 2.png"
+                    "/images/Services/tokyo-volumetric-analytics-of-different-types-in-web-browsers 2.png"
                   }
                   width={170}
                   height={210}
-                  alt="Social Media"
+                  alt="Analytics and Tracking"
                 />
               </div>
             </div>
