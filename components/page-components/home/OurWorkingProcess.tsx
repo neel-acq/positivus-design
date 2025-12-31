@@ -52,14 +52,22 @@ export default function OurWorkingProcess() {
 
   return (
     <section>
-      <header className="flex items-center gap-10 mb-20">
-        <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
-          Our Working Process
-        </h2>
-        <p className="w-130">
-          Step-by-Step Guide to Achieving Your Business Goals
-        </p>
-      </header>
+      <div className="items-center mb-20">
+        <div className="flex gap-10">
+          <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
+            Our Working Process
+          </h2>
+          <p className="sm:block hidden w-145">
+            Step-by-Step Guide to Achieving Your Business Goals
+          </p>
+        </div>
+        <div className="sm:hidden block">
+          <br />
+          <p className="w-auto">
+            Step-by-Step Guide to Achieving Your Business Goals
+          </p>
+        </div>
+      </div>
 
       {ACCORDION_ITEMS.map((item, index) => (
         <Card

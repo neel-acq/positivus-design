@@ -1,97 +1,122 @@
 "use client";
+
+import { useState } from "react";
+import Link from "next/link";
+
 import { ArrowLeft } from "@/components/ui/arrow-left";
 import { ArrowRight } from "@/components/ui/arrow-right";
 import { Card } from "@/components/ui/card";
 import GreenArrow from "@/components/ui/green-arrow";
 import { GreenVector } from "@/components/ui/green-vector";
-import VerticalLine from "@/components/ui/vertical-line";
 import { WhiteVector } from "@/components/ui/white-vector";
-import Link from "next/link";
-import { useState } from "react";
+import VerticalLine from "@/components/ui/vertical-line";
 
-type CASE_STUDIE_ITEMS = {
+type CaseStudyItem = {
   content: string;
 };
 
+const CASE_STUDIES: CaseStudyItem[] = [
+  {
+    content:
+      "For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.",
+  },
+  {
+    content:
+      "For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.",
+  },
+  {
+    content:
+      "For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.",
+  },
+];
+
 export default function CaseStudies() {
-  const CASE_STUDIE_ITEMS: CASE_STUDIE_ITEMS[] = [
-    {
-      content: `For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.`,
-    },
-    {
-      content: `For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.`,
-    },
-    {
-      content: `For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.`,
-    },
-  ];
-  const [index, setIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const prev = () =>
-    setIndex((prev) => (prev === 0 ? CASE_STUDIE_ITEMS.length - 1 : prev - 1));
+    setActiveIndex((i) => (i === 0 ? CASE_STUDIES.length - 1 : i - 1));
 
   const next = () =>
-    setIndex((prev) => (prev === CASE_STUDIE_ITEMS.length - 1 ? 0 : prev + 1));
+    setActiveIndex((i) => (i === CASE_STUDIES.length - 1 ? 0 : i + 1));
 
-  const current = (index: number) => {
-    setIndex(index);
-  };
   return (
-    <div>
-      <div className="flex items-center gap-10 mb-20">
-        <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
-          Case Studies
-        </h2>
-        <p className="w-130">
-          Explore Real-Life Examples of Our Proven Digital Marketing Success
-          through Our Case Studies
-        </p>
+    <section>
+      <div className="items-center mb-20">
+        <div className="flex gap-10">
+          <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
+            Case Studies
+          </h2>
+          <p className="sm:block hidden w-145">
+            Explore real-life examples of our proven digital marketing success
+            through our case studies.
+          </p>
+        </div>
+        <div className="sm:hidden block">
+          <br />
+          <p className="w-auto">
+            Explore real-life examples of our proven digital marketing success
+            through our case studies.
+          </p>
+        </div>
       </div>
-      <Card className="bg-black pt-17.5 pb-17.5 pl-15 pr-15">
-        <div className="flex overflow-hidden">
-          {CASE_STUDIE_ITEMS.map((item, index) => (
-            <div key={index} className="flex">
-              <div className="w-auto lg:w-auto md:w-150">
-                <p className="text-white">{item?.content}</p>
-                <div className="flex gap-4 mt-5">
-                  <Link href={"#"} className="text-[#B9FF66]">
-                    Learn more
-                  </Link>
-                  <GreenArrow />
-                </div>
+
+      <Card className="bg-black px-6 py-14 overflow-hidden">
+        <div className="hidden sm:grid grid-cols-3 gap-12">
+          {CASE_STUDIES.map((item, i) => (
+            <div key={i} className="flex gap-12">
+              <div>
+                <p className="text-white mb-6">{item.content}</p>
+                <Link
+                  href="#"
+                  className="flex items-center gap-2 text-[#B9FF66]"
+                >
+                  Learn more <GreenArrow />
+                </Link>
               </div>
-              {index + 1 != CASE_STUDIE_ITEMS.length && (
-                <div className="ml-16 mr-16">
-                  <VerticalLine />
-                </div>
-              )}
+              <div className="h-full">
+                {i !== CASE_STUDIES.length - 1 && <VerticalLine />}
+              </div>
             </div>
           ))}
         </div>
-        <div className="block sm:hidden">
-          <div className="flex justify-between ml-[30%] mr-[30%] lg:ml-[30%] lg:mr-[30%] md:ml-[10%] md:mr-[40%] sm:ml-[10%] sm:mr-[10%] items-center gap-10 mt-15">
-            <button
-              onClick={prev}
-              className="text-gray-500 hover:text-white transition text-2xl"
-            >
+
+        <div className="sm:hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+          >
+            {CASE_STUDIES.map((item, i) => (
+              <div key={i} className="min-w-full px-2">
+                <p className="text-white mb-6">{item.content}</p>
+                <Link
+                  href="#"
+                  className="flex items-center gap-2 text-[#B9FF66]"
+                >
+                  Learn more <GreenArrow />
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-center justify-center gap-8 mt-10">
+            <button onClick={prev}>
               <ArrowLeft />
             </button>
+
             <div className="flex gap-2">
-              {CASE_STUDIE_ITEMS.map((_, i) => (
-                <div onClick={() => current(i)} key={i}>
-                  {index == i ? <GreenVector /> : <WhiteVector />}
-                </div>
+              {CASE_STUDIES.map((_, i) => (
+                <button key={i} onClick={() => setActiveIndex(i)}>
+                  {activeIndex === i ? <GreenVector /> : <WhiteVector />}
+                </button>
               ))}
             </div>
-            <button
-              onClick={next}
-              className="text-gray-500 hover:text-white transition text-2xl"
-            >
+
+            <button onClick={next}>
               <ArrowRight />
             </button>
           </div>
         </div>
       </Card>
-    </div>
+    </section>
   );
 }

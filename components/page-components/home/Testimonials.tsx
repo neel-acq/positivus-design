@@ -18,7 +18,7 @@ export default function Testimonials() {
       name: "John Smith",
       designation: "Marketing Director at XYZ Corp",
       content:
-        "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+        "We highly recommend Positivus to any company looking to grow their online presence.",
     },
     {
       name: "John Smith",
@@ -54,56 +54,63 @@ export default function Testimonials() {
 
   return (
     <div>
-      <div className="flex items-center gap-10 mb-20">
-        <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
-          Testimonials
-        </h2>
-        <p className="w-130">
-          Hear from Our Satisfied Clients: Read Our Testimonials to Learn More
-          about Our Digital Marketing Services
-        </p>
+      <div className="items-center mb-20">
+        <div className="flex gap-10">
+          <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
+            Testimonials
+          </h2>
+          <p className="sm:block hidden w-145">
+            Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
+          </p>
+        </div>
+        <div className="sm:hidden block">
+          <br />
+          <p className="w-auto">
+            Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
+          </p>
+        </div>
       </div>
       <Card className="rounded-[45px] bg-[#191A23] pt-21 pb-17 overflow-hidden">
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-[5%]">
           <div
-            className="flex gap-10 transition-transform duration-500 ease-in-out mb-31"
-            style={{ transform: `translateX(-${index * 60}%)` }}
+            className="flex transition-transform duration-500 ease-in-out mb-31"
+            style={{ transform: `translateX(-${index * 100}%)` }}
           >
             {TESTIMONIAL_ITEMS.map((item, index) => (
               <div
                 key={index}
-                className="min-w-[60%] px-6 items-center justify-center"
+                className="min-w-[100%] lg:px-6 md:px-10 px-6 items-center justify-center"
               >
                 <div className="border border-[#B9FF66] p-13 text-white rounded-[45px] relative">
                   <p>"{item?.content}"</p>
                   <div className="left-16 w-6 h-6 bg-[#191A23] border-l border-b border-[#B9FF66] rotate-315 absolute mt-[41px]" />
                 </div>
                 <div className="mt-10 ml-16">
-                  <p className="text-[#B9FF66] font-semibold text-lg">
+                  <h4 className="text-[#B9FF66] font-semibold text-lg">
                     {item?.name}
-                  </p>
+                  </h4>
                   <p className="text-white text-sm">{item?.designation}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="flex justify-between ml-[30%] mr-[30%] lg:ml-[30%] lg:mr-[30%] md:ml-[10%] md:mr-[40%] sm:ml-[10%] sm:mr-[10%] items-center gap-10 mb-17">
+          <div className="flex justify-between ml-[30%] mr-[30%] lg:ml-[30%] lg:mr-[30%] md:ml-[10%] md:mr-[40%] sm:ml-[10%] sm:mr-[10%] items-center gap-10">
             <button
               onClick={prev}
-              className="text-gray-500 hover:text-white transition text-2xl"
+              className="text-gray-500 hover:text-white transition text-2xl cursor-pointer"
             >
               <ArrowLeft />
             </button>
             <div className="flex gap-2">
               {TESTIMONIAL_ITEMS.map((_, i) => (
-                <div onClick={() => current(i)} key={i}>
+                <div onClick={() => current(i)} key={i} className="cursor-pointer">
                   {index == i ? <GreenVector /> : <WhiteVector />}
                 </div>
               ))}
             </div>
             <button
               onClick={next}
-              className="text-gray-500 hover:text-white transition text-2xl"
+              className="text-gray-500 hover:text-white transition text-2xl cursor-pointer"
             >
               <ArrowRight />
             </button>

@@ -121,33 +121,89 @@
   }
 }
 
-  /* Loop horizontal scroll animation */
-  @keyframes logo-scroll {
-    0% {
-      transform: translateX(10%);
-    }
-
-    100% {
-      transform: translateX(-100%);
-    }
+/* Loop horizontal scroll animation */
+@keyframes logo-scroll {
+  0% {
+    transform: translateX(10%);
   }
 
-  /* Animation utility class */
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Animation utility class */
+.animate-logo-scroll {
+  width: max-content;
+  animation: logo-scroll 40s linear infinite;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
   .animate-logo-scroll {
-    width: max-content;
-    animation: logo-scroll 40s linear infinite;
+    animation-duration: 40s;
   }
+}
 
-  /* Mobile */
-  @media (max-width: 640px) {
-    .animate-logo-scroll {
-      animation-duration: 40s;
-    }
+/* Large screens */
+@media (min-width: 1024px) {
+  .animate-logo-scroll {
+    animation-duration: 20s;
   }
+}
 
-  /* Large screens */
-  @media (min-width: 1024px) {
-    .animate-logo-scroll {
-      animation-duration: 20s;
-    }
-  }
+/* custom css */
+
+/* Radio button */
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.radio-option input {
+  display: none;
+}
+
+/* default state */
+.radio-option svg rect {
+  fill: white;
+  stroke: black;
+}
+
+.radio-option svg circle {
+  fill: transparent;
+  transition: fill 0.2s ease, transform 0.2s ease;
+  transform: scale(0);
+}
+
+/* checked state */
+.radio-option input:checked+svg rect {
+  stroke: black;
+}
+
+.radio-option input:checked+svg circle {
+  fill: #B9FF66;
+  transform: scale(1);
+}
+
+h1 {
+  font-size: 60px !important;
+}
+
+h2 {
+  font-size: 40px !important;
+}
+
+h3 {
+  font-size: 30px !important;
+}
+
+h4 {
+  font-size: 20px !important;
+}
+
+p {
+  font-size: 18px !important;
+}

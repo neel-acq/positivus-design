@@ -57,16 +57,23 @@ export default function Team() {
   ];
   return (
     <div>
-      <div className="flex items-center gap-10 mb-20">
-        <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
-          Team
-        </h2>
-        <p className="w-130">
-          Meet the skilled and experienced team behind our successful digital
-          marketing strategies
-        </p>
+      <div className="items-center mb-20">
+        <div className="flex gap-10">
+          <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
+            Team
+          </h2>
+          <p className="sm:block hidden w-145">
+            Meet the skilled and experienced team behind our successful digital marketing strategies
+          </p>
+        </div>
+        <div className="sm:hidden block">
+          <br />
+          <p className="w-auto">
+            Meet the skilled and experienced team behind our successful digital marketing strategies
+          </p>
+        </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-10">
         {TEAMS.map((item, index) => (
           <Card
             key={index + 1}
@@ -101,7 +108,12 @@ export default function Team() {
         ))}
       </div>
       <div className="mt-10 float-right">
-        <Button variant={"custom_button_black"} className="rounded-2xl p-5 w-[269px]">See all team</Button>
+        <Button
+          variant={"custom_button_black"}
+          className="rounded-2xl p-5 w-[269px]"
+        >
+          See all team
+        </Button>
       </div>
     </div>
   );
