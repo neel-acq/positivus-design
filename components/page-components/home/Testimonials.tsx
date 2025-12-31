@@ -94,14 +94,15 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
-          <div className="flex justify-between ml-[30%] mr-[30%] lg:ml-[30%] lg:mr-[30%] md:ml-[10%] md:mr-[40%] sm:ml-[10%] sm:mr-[10%] items-center gap-10">
+          {/* <div className="flex justify-between ml-[30%] mr-[30%] lg:ml-[30%] lg:mr-[30%] md:ml-[10%] md:mr-[40%] sm:ml-[10%] sm:mr-[10%] items-center gap-10"> */}
+          <div className="flex justify-center items-center">
             <button
               onClick={prev}
               className="text-gray-500 hover:text-white transition text-2xl cursor-pointer"
             >
               <ArrowLeft />
             </button>
-            <div className="flex gap-2">
+            <div className="flex gap-2 ml-[20%] mr-[20%]">
               {TESTIMONIAL_ITEMS.map((_, i) => (
                 <div onClick={() => current(i)} key={i} className="cursor-pointer">
                   {index == i ? <GreenVector /> : <WhiteVector />}

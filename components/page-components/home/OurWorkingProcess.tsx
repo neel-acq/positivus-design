@@ -74,7 +74,7 @@ export default function OurWorkingProcess() {
           key={index + 1}
           className={`bg-[#${
             openIndex == index ? "B9FF66" : "F3F3F3"
-          }] pt-5 pb-5 pl-15 pr-15 border-black border-b-5 mb-7.5`}
+          }] pt-10 pb-10 pl-15 pr-15 border-black border-b-5 mb-7.5`}
         >
           <AccordionItem
             index={index + 1}
@@ -112,21 +112,35 @@ function AccordionItem({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between p-5 font-medium text-body hover:text-fg-brand hover:bg-brand-softer transition cursor-pointer"
+        className="flex w-full items-center justify-between cursor-pointer"
       >
         <div className="flex items-center">
-          <span className="mr-6 text-[30px]">0{index}</span>
-          <h3>{title}</h3>
+          <span className="mr-6 text-[60px]">0{index}</span>
+          <span className="hidden sm:block text-[30px] ">{title}</span>
         </div>
 
-        {isOpen ? <MinusCircle /> : <PlusCircle />}
+        <div className="w-auto h-auto hidden sm:block">
+          {isOpen ? (
+            <MinusCircle />
+          ) : (
+            <PlusCircle />
+          )}
+        </div>
+        <div className="w-auto h-auto sm:hidden block">
+          {isOpen ? (
+            <MinusCircle width={35} height={35} />
+          ) : (
+            <PlusCircle width={35} height={35} />
+          )}
+        </div>
       </button>
+      <h3 onClick={onToggle} className="sm:hidden block cursor-pointer">
+        {title}
+      </h3>
       {isOpen && (
         <div>
-          <hr className="border-black pt-7.5 pb-7.5" />
-          <div className="px-5 pb-5 text-body animate-in fade-in slide-in-from-top-1">
-            {children}
-          </div>
+          <hr className="border-black mt-5 mb-7.5" />
+          <p className="">{children}</p>
         </div>
       )}
     </div>

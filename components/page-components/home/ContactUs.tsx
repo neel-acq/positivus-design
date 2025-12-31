@@ -49,7 +49,9 @@ export default function ContactUs() {
               </div>
 
               <div className="mb-6">
-                <span className="font-[16px]">Name</span>
+                <div className="mb-[5px]">
+                  <span className="font-[16px]">Name</span>
+                </div>
                 <Input
                   type="text"
                   placeholder="Name"
@@ -57,7 +59,9 @@ export default function ContactUs() {
                 />
               </div>
               <div className="mb-6">
-                <span className="font-[16px]">Email*</span>
+                <div className="mb-[5px]">
+                  <span className="font-[16px]">Email*</span>
+                </div>
                 <Input
                   type="email"
                   placeholder="Email"
@@ -65,10 +69,13 @@ export default function ContactUs() {
                 />
               </div>
               <div className="mb-6">
-                <span className="font-[16px]">Message*</span>
+                <div className="mb-[5px]">
+                  <span className="font-[16px]">Message*</span>
+                </div>
                 <Textarea
                   placeholder="Message"
                   className="border-black bg-white"
+                  style={{height:132}}
                 />
               </div>
               <div>
@@ -79,32 +86,14 @@ export default function ContactUs() {
             </form>
           </div>
           <div className="float-right flex hidden lg:block">
-            <div className="relative left-85 top-20 sm:left-45 sm:top-65">
+            <div className="relative overflow-hidden">
+              {/* <div className="relative lg:left-[200px] lg:md:left-[200px] lg:md:md:left-[145px] lg:sm:left-[145px] lg:top-[-100]"> */}
               <Image
-                src={"/images/Vector-black.png"}
-                width={150}
-                height={150}
+                src="/images/group.png"
+                width={550}
+                height={450}
                 alt=""
-              />
-            </div>
-            <div className="absolute ">
-              <div className="relative left-65 top-65 sm:left-35 sm:top-55">
-                <Image
-                  src={"/images/Vector-green.png"}
-                  width={150}
-                  height={150}
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div className="relative left-[200px] top-[-100]">
-            {/* <div className="relative lg:left-[200px] lg:md:left-[200px] lg:md:md:left-[145px] lg:sm:left-[145px] lg:top-[-100]"> */}
-              <Image
-                src={"/images/Mask-group.png"}
-                width={400}
-                height={400}
-                alt=""
+                className="ml-[47%]"
               />
             </div>
           </div>

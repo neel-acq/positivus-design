@@ -12,7 +12,7 @@ export default function Proposal() {
             <div className="flex">
               <div className="pt-6">
                 <h3 className="text-3xl font-bold">Let’s make things happen</h3>
-                <div className="relative w-full md:w-[420px] h-[275px] flex items-center justify-center  lg:hidden">
+                <div className="relative w-full h-[50%] flex items-center justify-center  sm:hidden">
                   <Image
                     src="/images/ProposalIllustration.png"
                     alt="Proposal Illustration"
@@ -29,7 +29,7 @@ export default function Proposal() {
                 </Button>
               </div>
 
-              <div className="relative w-full md:w-[420px] h-[275px] flex items-center justify-center hidden md:flex mr-35">
+              <div className="relative w-[420px] h-[275px] sm:w-[420px] sm:h-[275px] flex items-center justify-center hidden sm:flex lg:sm:mr-35 ">
                 <Image
                   src="/images/ProposalIllustration.png"
                   alt="Proposal Illustration"

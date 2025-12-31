@@ -63,17 +63,19 @@ export default function Team() {
             Team
           </h2>
           <p className="sm:block hidden w-145">
-            Meet the skilled and experienced team behind our successful digital marketing strategies
+            Meet the skilled and experienced team behind our successful digital
+            marketing strategies
           </p>
         </div>
         <div className="sm:hidden block">
           <br />
           <p className="w-auto">
-            Meet the skilled and experienced team behind our successful digital marketing strategies
+            Meet the skilled and experienced team behind our successful digital
+            marketing strategies
           </p>
         </div>
       </div>
-      <div className="grid md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-10">
+      <div className="grid lg:sm:grid-cols-3 md:md:sm:grid-cols-2 grid-cols-1 gap-10">
         {TEAMS.map((item, index) => (
           <Card
             key={index + 1}
@@ -89,14 +91,21 @@ export default function Team() {
                     alt="Picture1"
                   />
                 </div>
-                <div className="flex items-end justify-center">
-                  <div>
+                <div className="flex items-end justify-center pl-5">
+                  <div className="md:block hidden ">
                     <h4>{item?.name}</h4>
                     <p>{item?.designation}</p>
                   </div>
                 </div>
                 <div className="float-right">
                   <LinkedIn />
+                </div>
+              </div>
+              <div className="flex items-end justify-start">
+                <div className="block md:hidden ">
+                  <br />
+                  <h4>{item?.name}</h4>
+                  <p>{item?.designation}</p>
                 </div>
               </div>
               <hr className="border-black mt-7 mb-7" />
@@ -107,10 +116,10 @@ export default function Team() {
           </Card>
         ))}
       </div>
-      <div className="mt-10 float-right">
+      <div className="mt-10 float-right w-full sm:w-auto">
         <Button
           variant={"custom_button_black"}
-          className="rounded-2xl p-5 w-[269px]"
+          className="rounded-2xl p-5 w-full sm:w-[269px]"
         >
           See all team
         </Button>

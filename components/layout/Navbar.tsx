@@ -21,7 +21,7 @@ export default function Navbar() {
               className="w-36 sm:w-44 lg:w-[180px]"
             />
           </div>
-          <div className="hidden lg:flex flex items-center gap-10">
+          <div className="hidden lg:flex flex items-center md:gap-6 sm:gap-10">
             <Link href="#" className="text-black">
               About us
             </Link>

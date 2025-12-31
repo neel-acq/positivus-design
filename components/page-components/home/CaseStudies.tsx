@@ -60,8 +60,8 @@ export default function CaseStudies() {
         </div>
       </div>
 
-      <Card className="bg-black px-6 py-14 overflow-hidden">
-        <div className="hidden sm:grid grid-cols-3 gap-12">
+      <Card className="bg-black pl-15 pr-15 pt-17.5 pb-17.5 overflow-hidden">
+        <div className="hidden lg:grid grid-cols-3 gap-12">
           {CASE_STUDIES.map((item, i) => (
             <div key={i} className="flex gap-12">
               <div>
@@ -80,30 +80,32 @@ export default function CaseStudies() {
           ))}
         </div>
 
-        <div className="sm:hidden">
+        <div className="lg:hidden">
           <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+            className="flex "
           >
-            {CASE_STUDIES.map((item, i) => (
-              <div key={i} className="min-w-full px-2">
-                <p className="text-white mb-6">{item.content}</p>
-                <Link
-                  href="#"
-                  className="flex items-center gap-2 text-[#B9FF66]"
-                >
-                  Learn more <GreenArrow />
-                </Link>
-              </div>
-            ))}
+            <div className="flex">
+              {CASE_STUDIES.map((item, i) => (
+                // <div key={i} className="min-w-full items-center justify-center">
+                <div key={i} className={`min-w-full items-center justify-center ${i==activeIndex?"block":"hidden"}`}>
+                  <p className="text-white mb-6">{item.content}</p>
+                  <Link
+                    href="#"
+                    className="flex items-center gap-2 text-[#B9FF66]"
+                  >
+                    Learn more <GreenArrow />
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="flex items-center justify-center gap-8 mt-10">
+          <div className="flex items-center justify-center mt-10">
             <button onClick={prev}>
               <ArrowLeft />
             </button>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2  ml-[20%] mr-[20%]">
               {CASE_STUDIES.map((_, i) => (
                 <button key={i} onClick={() => setActiveIndex(i)}>
                   {activeIndex === i ? <GreenVector /> : <WhiteVector />}
