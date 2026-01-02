@@ -24,17 +24,21 @@ export default function Proposal() {
                   Contact us today to learn more about how our digital marketing
                   services can help your business grow and succeed online.
                 </p>
-                <Button variant={"custom_button_black"} className="mt-6.5 sm:w-auto w-full">
+                <Button
+                  variant={"custom_button_black"}
+                  className="mt-6.5 sm:w-auto w-full"
+                >
                   Get your free proposal
                 </Button>
               </div>
 
-              <div className="relative w-[420px] h-[275px] sm:w-[420px] sm:h-[275px] flex items-center justify-center hidden sm:flex lg:sm:mr-35 ">
+              <div className="relative w-[520px] h-[275px] sm:w-[520px] sm:h-[275px] flex items-center justify-center hidden sm:flex lg:sm:mr-35 ">
                 <Image
                   src="/images/ProposalIllustration.png"
                   alt="Proposal Illustration"
                   width={359}
                   height={394}
+                  className="w-[520px] h-[394px] "
                 />
               </div>
             </div>

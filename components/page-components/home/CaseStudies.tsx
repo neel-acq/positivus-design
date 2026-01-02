@@ -81,29 +81,31 @@ export default function CaseStudies() {
         </div>
 
         <div className="lg:hidden">
-          <div className="flex ">
-            <div className="flex">
-              {CASE_STUDIES.map((item, i) => (
-                // <div key={i} className="min-w-full items-center justify-center">
-                <div
-                  key={i}
-                  className={`min-w-full items-center justify-center ${
-                    i == activeIndex ? "block" : "hidden"
-                  }`}
-                >
-                  <p className="text-white mb-6">{item.content}</p>
-                  <Link
-                    href="#"
-                    className="flex items-center gap-2 text-[#B9FF66]"
+          <div className="flex overflow-hidden">
+            <div className="relative flex">
+              <div
+                className="flex transition-transform duration-500 ease-in-out mb-15"
+                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+              >
+                {CASE_STUDIES.map((item, i) => (
+                  <div
+                    key={i}
+                    className="min-w-[100%] lg:px-6 md:px-10 px-6 items-center justify-center"
                   >
-                    Learn more <GreenArrow />
-                  </Link>
-                </div>
-              ))}
+                    <p className="text-white mb-6">{item.content}</p>
+                    <Link
+                      href="#"
+                      className="flex items-center gap-2 text-[#B9FF66]"
+                    >
+                      Learn more <GreenArrow />
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="flex items-center justify-center mt-10">
+          <div className="flex items-center justify-center ">
             <button onClick={prev}>
               <ArrowLeft />
             </button>

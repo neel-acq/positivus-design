@@ -73,7 +73,7 @@ export default function Testimonials() {
         </div>
       </div>
       <Card className="rounded-[45px] bg-[#191A23] pt-21 pb-17 overflow-hidden">
-        <div className="relative max-w-7xl mx-[5%]">
+        <div className="relative mx-[20%]">
           <div
             className="flex transition-transform duration-500 ease-in-out mb-31"
             style={{ transform: `translateX(-${index * 100}%)` }}
@@ -91,37 +91,36 @@ export default function Testimonials() {
                   <h4 className="text-[#B9FF66] font-semibold text-lg">
                     {item?.name}
                   </h4>
-                  <p className="text-white text-sm">{item?.designation}</p>
+                  <p className="text-white text-sm encrypted-text">{item?.designation}</p>
                 </div>
               </div>
             ))}
           </div>
-          {/* <div className="flex justify-between ml-[30%] mr-[30%] lg:ml-[30%] lg:mr-[30%] md:ml-[10%] md:mr-[40%] sm:ml-[10%] sm:mr-[10%] items-center gap-10"> */}
-          <div className="flex justify-center items-center">
-            <button
-              onClick={prev}
-              className="text-gray-500 hover:text-white transition text-2xl cursor-pointer"
-            >
-              <ArrowLeft />
-            </button>
-            <div className="flex gap-2 ml-[20%] mr-[20%]">
-              {TESTIMONIAL_ITEMS.map((_, i) => (
-                <div
-                  onClick={() => current(i)}
-                  key={i}
-                  className="cursor-pointer"
-                >
-                  {index == i ? <GreenVector /> : <WhiteVector />}
-                </div>
-              ))}
-            </div>
-            <button
-              onClick={next}
-              className="text-gray-500 hover:text-white transition text-2xl cursor-pointer"
-            >
-              <ArrowRight />
-            </button>
+        </div>
+        <div className="flex justify-center items-center">
+          <button
+            onClick={prev}
+            className="text-gray-500 hover:text-white transition text-2xl cursor-pointer"
+          >
+            <ArrowLeft />
+          </button>
+          <div className="flex gap-2 ml-[20%] mr-[20%]">
+            {TESTIMONIAL_ITEMS.map((_, i) => (
+              <div
+                onClick={() => current(i)}
+                key={i}
+                className="cursor-pointer"
+              >
+                {index == i ? <GreenVector /> : <WhiteVector />}
+              </div>
+            ))}
           </div>
+          <button
+            onClick={next}
+            className="text-gray-500 hover:text-white transition text-2xl cursor-pointer"
+          >
+            <ArrowRight />
+          </button>
         </div>
       </Card>
     </div>
