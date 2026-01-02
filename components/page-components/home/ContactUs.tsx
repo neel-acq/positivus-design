@@ -13,13 +13,13 @@ export default function ContactUs() {
           <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
             Contact Us
           </h2>
-          <p className="sm:block hidden w-145">
+          <p className="sm:block hidden w-145 hover:underline hover:decoration-dotted hover:decoration-[#000000] hover:underline-offset-4 transition-all cursor-text">
             Connect with Us: Let's Discuss Your Digital Marketing Needs
           </p>
         </div>
         <div className="sm:hidden block">
           <br />
-          <p className="w-auto">
+          <p className="w-auto underline decoration-dotted decoration-[#000000] underline-offset-4 transition-all cursor-text">
             Connect with Us: Let's Discuss Your Digital Marketing Needs
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function ContactUs() {
                 <Textarea
                   placeholder="Message"
                   className="border-black bg-white"
-                  style={{height:132}}
+                  style={{ height: 132 }}
                 />
               </div>
               <div>

@@ -9,7 +9,7 @@ export default function Proposal() {
       <Card className="bg-[#F3F3F3] border-none">
         <div className="flex flex-col md:flex-row justify-between gap-6">
           <Container>
-            <div className="flex">
+            <div className="flex justify-between">
               <div className="mt-6 mb-6">
                 <h3 className="text-3xl font-bold">Let’s make things happen</h3>
                 <div className="relative w-full h-[50%] flex items-center justify-center  sm:hidden">

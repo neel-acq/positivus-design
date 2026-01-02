@@ -75,17 +75,17 @@ export default function Services() {
     <div>
       <div className="items-center mb-20">
         <div className="flex gap-10">
-          <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
+          <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 ">
             Services
           </h2>
-          <p className="sm:block hidden w-145">
+          <p className="sm:block hidden w-145 hover:underline hover:decoration-dotted hover:decoration-[#000000] hover:underline-offset-4 transition-all cursor-text">
             At our digital marketing agency, we offer a range of services to
             help businesses grow and succeed online. These services include:
           </p>
         </div>
         <div className="sm:hidden block">
           <br />
-          <p className="w-auto">
+          <p className="w-auto underline decoration-dotted decoration-[#000000] underline-offset-4 transition-all cursor-text">
             At our digital marketing agency, we offer a range of services to
             help businesses grow and succeed online. These services include:
           </p>

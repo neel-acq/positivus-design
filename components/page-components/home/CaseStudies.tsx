@@ -46,14 +46,14 @@ export default function CaseStudies() {
           <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
             Case Studies
           </h2>
-          <p className="sm:block hidden w-145">
+          <p className="sm:block hidden w-145 hover:underline hover:decoration-dotted hover:decoration-[#000000] hover:underline-offset-4 transition-all cursor-text">
             Explore real-life examples of our proven digital marketing success
             through our case studies.
           </p>
         </div>
         <div className="sm:hidden block">
           <br />
-          <p className="w-auto">
+          <p className="w-auto underline decoration-dotted decoration-[#000000] underline-offset-4 transition-all cursor-text">
             Explore real-life examples of our proven digital marketing success
             through our case studies.
           </p>
@@ -81,13 +81,16 @@ export default function CaseStudies() {
         </div>
 
         <div className="lg:hidden">
-          <div
-            className="flex "
-          >
+          <div className="flex ">
             <div className="flex">
               {CASE_STUDIES.map((item, i) => (
                 // <div key={i} className="min-w-full items-center justify-center">
-                <div key={i} className={`min-w-full items-center justify-center ${i==activeIndex?"block":"hidden"}`}>
+                <div
+                  key={i}
+                  className={`min-w-full items-center justify-center ${
+                    i == activeIndex ? "block" : "hidden"
+                  }`}
+                >
                   <p className="text-white mb-6">{item.content}</p>
                   <Link
                     href="#"

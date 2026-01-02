@@ -59,14 +59,16 @@ export default function Testimonials() {
           <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
             Testimonials
           </h2>
-          <p className="sm:block hidden w-145">
-            Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
+          <p className="sm:block hidden w-145 hover:underline hover:decoration-dotted hover:decoration-[#000000] hover:underline-offset-4 transition-all cursor-text">
+            Hear from Our Satisfied Clients: Read Our Testimonials to Learn More
+            about Our Digital Marketing Services
           </p>
         </div>
         <div className="sm:hidden block">
           <br />
-          <p className="w-auto">
-            Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
+          <p className="w-auto underline decoration-dotted decoration-[#000000] underline-offset-4 transition-all cursor-text">
+            Hear from Our Satisfied Clients: Read Our Testimonials to Learn More
+            about Our Digital Marketing Services
           </p>
         </div>
       </div>
@@ -104,7 +106,11 @@ export default function Testimonials() {
             </button>
             <div className="flex gap-2 ml-[20%] mr-[20%]">
               {TESTIMONIAL_ITEMS.map((_, i) => (
-                <div onClick={() => current(i)} key={i} className="cursor-pointer">
+                <div
+                  onClick={() => current(i)}
+                  key={i}
+                  className="cursor-pointer"
+                >
                   {index == i ? <GreenVector /> : <WhiteVector />}
                 </div>
               ))}

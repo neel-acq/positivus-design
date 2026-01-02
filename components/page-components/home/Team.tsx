@@ -62,14 +62,14 @@ export default function Team() {
           <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
             Team
           </h2>
-          <p className="sm:block hidden w-145">
+          <p className="sm:block hidden w-145 hover:underline hover:decoration-dotted hover:decoration-[#000000] hover:underline-offset-4 transition-all cursor-text">
             Meet the skilled and experienced team behind our successful digital
             marketing strategies
           </p>
         </div>
         <div className="sm:hidden block">
           <br />
-          <p className="w-auto">
+          <p className="w-auto underline decoration-dotted decoration-[#000000] underline-offset-4 transition-all cursor-text">
             Meet the skilled and experienced team behind our successful digital
             marketing strategies
           </p>

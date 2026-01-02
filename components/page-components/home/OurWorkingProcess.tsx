@@ -57,13 +57,13 @@ export default function OurWorkingProcess() {
           <h2 className="bg-[#B9FF66] rounded-[7px] font-bold p-2 text-2xl">
             Our Working Process
           </h2>
-          <p className="sm:block hidden w-145">
+          <p className="sm:block hidden w-145 hover:underline hover:decoration-dotted hover:decoration-[#000000] hover:underline-offset-4 transition-all cursor-text">
             Step-by-Step Guide to Achieving Your Business Goals
           </p>
         </div>
         <div className="sm:hidden block">
           <br />
-          <p className="w-auto">
+          <p className="w-auto underline decoration-dotted decoration-[#000000] underline-offset-4 transition-all cursor-text">
             Step-by-Step Guide to Achieving Your Business Goals
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function OurWorkingProcess() {
                 className="flex w-full items-center justify-between cursor-pointer"
               >
                 <div className="flex items-center">
-                  <span className="mr-6 text-[60px]">0{index+1}</span>
+                  <span className="mr-6 text-[60px]">0{index + 1}</span>
                   <span className="hidden sm:block text-[30px] ">{title}</span>
                 </div>
 
@@ -95,7 +95,10 @@ export default function OurWorkingProcess() {
                   {isOpen ? <MinusCircle /> : <PlusCircle />}
                 </div>
               </button>
-              <h3 onClick={() => toggle(index)} className="sm:hidden block cursor-pointer wrap-break-word">
+              <h3
+                onClick={() => toggle(index)}
+                className="sm:hidden block cursor-pointer wrap-break-word"
+              >
                 {title}
               </h3>
               {isOpen && (
