@@ -95,17 +95,17 @@ export default function Services() {
         {SERVICE_ITEMS.map((item, index) => (
           <Card
             key={index}
-            className={`p-12.5 bg-[#${item?.bg_color}] border-black border-b-5`}
+            className={`p-12.5 bg-[#${item?.bg_color}] border-black border-b-5 shadow-2xl shadow-accent-foreground`}
           >
-            <div className="flex flex-col">
-              <div className="flex justify-between">
+            <div className="flex flex-col items-center lg:items-start">
+              <div className="flex justify-between sm:w-full">
                 <div className="">
                   <h3
                     className={`bg-[#${item?.title_bg_color}] text-${item?.title_text_color} rounded-[7px] font-bold p-2 text-2xl w-fit max-w-[210px] `}
                   >
                     {item?.title}
                   </h3>
-                  <div className="mt-5.5 mb-5.5 sm:hidden block">
+                  <div className="mt-5.5 mb-5.5 lg:hidden block">
                     <Image
                       src={`/images/Services/${item?.image}`}
                       width={170}
@@ -113,7 +113,7 @@ export default function Services() {
                       alt={item?.title}
                     />
                   </div>
-                  <div className="flex items-center mt-23">
+                  <div className="flex items-center lg:mt-23">
                     <div
                       className={`bg-${item?.bg_text_color} rounded-full p-2 w-fit`}
                     >
@@ -124,7 +124,7 @@ export default function Services() {
                     </p>
                   </div>
                 </div>
-                <div className="mt-5.5 mb-5.5 sm:block hidden">
+                <div className="mt-5.5 mb-5.5 lg:block hidden">
                   <Image
                     src={`/images/Services/${item?.image}`}
                     width={170}

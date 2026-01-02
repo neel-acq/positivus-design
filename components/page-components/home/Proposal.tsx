@@ -10,7 +10,7 @@ export default function Proposal() {
         <div className="flex flex-col md:flex-row justify-between gap-6">
           <Container>
             <div className="flex">
-              <div className="pt-6">
+              <div className="mt-6 mb-6">
                 <h3 className="text-3xl font-bold">Let’s make things happen</h3>
                 <div className="relative w-full h-[50%] flex items-center justify-center  sm:hidden">
                   <Image
@@ -24,7 +24,7 @@ export default function Proposal() {
                   Contact us today to learn more about how our digital marketing
                   services can help your business grow and succeed online.
                 </p>
-                <Button variant={"custom_button_black"} className="mt-6.5">
+                <Button variant={"custom_button_black"} className="mt-6.5 sm:w-auto w-full">
                   Get your free proposal
                 </Button>
               </div>

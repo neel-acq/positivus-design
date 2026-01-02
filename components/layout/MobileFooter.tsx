@@ -7,7 +7,7 @@ import { Card } from "../ui/card";
 export default function MobileFooter() {
   return (
     <>
-      <footer className="bg-black h-auto mt-35">
+      <footer className="bg-black rounded-t-3xl h-auto mt-35">
         <Container className="px-6">
           <div className="">
             <div className="">

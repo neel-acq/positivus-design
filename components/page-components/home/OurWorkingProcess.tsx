@@ -69,80 +69,45 @@ export default function OurWorkingProcess() {
         </div>
       </div>
 
-      {ACCORDION_ITEMS.map((item, index) => (
-        <Card
-          key={index + 1}
-          className={`bg-[#${
-            openIndex == index ? "B9FF66" : "F3F3F3"
-          }] pt-10 pb-10 pl-15 pr-15 border-black border-b-5 mb-7.5`}
-        >
-          <AccordionItem
-            index={index + 1}
-            key={item.title}
-            title={item.title}
-            isOpen={openIndex === index}
-            onToggle={() => toggle(index)}
+      {ACCORDION_ITEMS.map((item, index) => {
+        const isOpen = openIndex === index;
+        const { title, content: children } = item;
+        return (
+          <Card
+            key={index + 1}
+            className={`bg-[#${
+              openIndex == index ? "B9FF66" : "F3F3F3"
+            }] pt-10 pb-10 pl-15 pr-15 border-black border-b-5 mb-7.5 shadow-2xl shadow-accent-foreground`}
           >
-            {item.content}
-          </AccordionItem>
-        </Card>
-      ))}
+            <div className="border-b border-default last:border-b-0">
+              <button
+                type="button"
+                onClick={() => toggle(index)}
+                aria-expanded={isOpen}
+                className="flex w-full items-center justify-between cursor-pointer"
+              >
+                <div className="flex items-center">
+                  <span className="mr-6 text-[60px]">0{index+1}</span>
+                  <span className="hidden sm:block text-[30px] ">{title}</span>
+                </div>
+
+                <div className="w-auto h-auto">
+                  {isOpen ? <MinusCircle /> : <PlusCircle />}
+                </div>
+              </button>
+              <h3 onClick={() => toggle(index)} className="sm:hidden block cursor-pointer wrap-break-word">
+                {title}
+              </h3>
+              {isOpen && (
+                <div>
+                  <hr className="border-black mt-5 mb-7.5" />
+                  <p className="">{children}</p>
+                </div>
+              )}
+            </div>
+          </Card>
+        );
+      })}
     </section>
-  );
-}
-
-/* ---------------- Accordion Item ---------------- */
-
-function AccordionItem({
-  index,
-  title,
-  isOpen,
-  onToggle,
-  children,
-}: {
-  index: number;
-  title: string;
-  isOpen: boolean;
-  onToggle: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="border-b border-default last:border-b-0">
-      <button
-        type="button"
-        onClick={onToggle}
-        aria-expanded={isOpen}
-        className="flex w-full items-center justify-between cursor-pointer"
-      >
-        <div className="flex items-center">
-          <span className="mr-6 text-[60px]">0{index}</span>
-          <span className="hidden sm:block text-[30px] ">{title}</span>
-        </div>
-
-        <div className="w-auto h-auto hidden sm:block">
-          {isOpen ? (
-            <MinusCircle />
-          ) : (
-            <PlusCircle />
-          )}
-        </div>
-        <div className="w-auto h-auto sm:hidden block">
-          {isOpen ? (
-            <MinusCircle width={35} height={35} />
-          ) : (
-            <PlusCircle width={35} height={35} />
-          )}
-        </div>
-      </button>
-      <h3 onClick={onToggle} className="sm:hidden block cursor-pointer">
-        {title}
-      </h3>
-      {isOpen && (
-        <div>
-          <hr className="border-black mt-5 mb-7.5" />
-          <p className="">{children}</p>
-        </div>
-      )}
-    </div>
   );
 }

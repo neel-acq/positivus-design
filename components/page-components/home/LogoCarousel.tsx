@@ -17,7 +17,7 @@ export default function LogoCarousel() {
           return (
             <div
               key={index}
-              className="flex-shrink-0 w-28 sm:w-32 h-14 sm:h-16 flex items-center justify-center"
+              className="flex-shrink-0 w-28 sm:w-32 h-14 sm:h-16 flex items-center justify-center cursor-pointer"
             >
               <Image
                 src={logo}

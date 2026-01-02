@@ -138,6 +138,10 @@
   animation: logo-scroll 40s linear infinite;
 }
 
+.animate-logo-scroll:hover {
+  animation-play-state: paused;
+}
+
 /* Mobile */
 @media (max-width: 640px) {
   .animate-logo-scroll {

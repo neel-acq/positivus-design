@@ -75,11 +75,11 @@ export default function Team() {
           </p>
         </div>
       </div>
-      <div className="grid lg:sm:grid-cols-3 md:md:sm:grid-cols-2 grid-cols-1 gap-10">
+      <div className="grid xl:grid-cols-3 md:md:sm:grid-cols-2 grid-cols-1 gap-10">
         {TEAMS.map((item, index) => (
           <Card
             key={index + 1}
-            className="bg-[#FFFFFF] pt-10 pb-10 pl-9 pr-9 border-black border-b-5 rounded-[45px] cursor-pointer"
+            className="shadow-2xl shadow-accent-foreground bg-[#FFFFFF] pt-10 pb-10 pl-9 pr-9 border-black border-b-5 rounded-[45px] cursor-pointer"
           >
             <div>
               <div className="flex justify-between">
@@ -93,7 +93,7 @@ export default function Team() {
                 </div>
                 <div className="flex items-end justify-center pl-5">
                   <div className="md:block hidden ">
-                    <h4>{item?.name}</h4>
+                    <h4 className="font-medium">{item?.name}</h4>
                     <p>{item?.designation}</p>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ export default function Team() {
               <div className="flex items-end justify-start">
                 <div className="block md:hidden ">
                   <br />
-                  <h4>{item?.name}</h4>
+                  <h4 className="font-medium">{item?.name}</h4>
                   <p>{item?.designation}</p>
                 </div>
               </div>
